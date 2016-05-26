@@ -1,5 +1,8 @@
 == README
 
+Blog : http://fifiteen82726-blog.logdown.com/posts/734567-rails-think-tank-fubaojin-flow
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
