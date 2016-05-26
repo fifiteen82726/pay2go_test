@@ -1,0 +1,22 @@
+<%= @order.total %>
+
+
+
+<form method="post" action="https://capi.pay2go.com/MPG/mpg_gateway">               <!-- 此為測試的 url, 正式為 : https://api.pay2go.com/MPG/mpg_gateway -->
+  <input type="hidden" name="MerchantID" value="<%= @MerchantID %>"/>
+  <input type="hidden" name="RespondType" value="JSON"/>
+  <input type="hidden" name="CheckValue" value="<%= @check_value %>"/>
+  <input type="hidden" name="TimeStamp" value="<%= @order.created_at.to_i %>"/>
+  <input type="hidden" name="Version" value="1.2"/>
+  <input type="hidden" name="MerchantOrderNo" value="<%= @order.id %>"/>
+  <input type="hidden" name="Amt" value="<%= @order.total %>"/>
+  <input type="hidden" name="ItemDesc" value="TESTTESTTEST"/>                       <!-- 商品資訊，先隨便帶 -->
+  <input type="text" name="CustomerURL" value=""/>
+  <input type="hidden" name="Email" value="fifiteen82726@gmail.com"/>                  <!-- 付款成功時會依照 Email 欄位填的 Email 寄送付款成功信件 -->
+  <input type="hidden" name="LoginType" value="0"/>                                 <!-- 0 = 不須登入智付寶會員 -->
+  <button type="submit">付款</button>
+</form>
+
+
+<%#= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
