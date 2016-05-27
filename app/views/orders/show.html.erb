@@ -11,11 +11,19 @@
   <input type="hidden" name="MerchantOrderNo" value="<%= @order.id %>"/>
   <input type="hidden" name="Amt" value="<%= @order.total %>"/>
   <input type="hidden" name="ItemDesc" value="TESTTESTTEST"/>                       <!-- 商品資訊，先隨便帶 -->
-  <input type="text" name="CustomerURL" value=""/>
-  <input type="hidden" name="Email" value="fifiteen82726@gmail.com"/>                  <!-- 付款成功時會依照 Email 欄位填的 Email 寄送付款成功信件 -->
-  <input type="hidden" name="LoginType" value="0"/>                                 <!-- 0 = 不須登入智付寶會員 -->
+
+  <!-- 回傳的url -->
+  <!-- <input type="text" name="CustomerURL" value="<%= vieworder_orders_url%>"/> -->
+  <input type="hidden" name="Email" value="fifiteen82726@gmail.com"/>        
+  <!-- 付款成功時會依照 Email 欄位填的 Email 寄送付款成功信件 -->
+  <input type="hidden" name="LoginType" value="0"/>    
+  <input type="hidden" name="ReturnURL" value="<%= vieworder_orders_url%>"/>    
+
+
+  <!-- 0 = 不須登入智付寶會員 -->
   <button type="submit">付款</button>
 </form>
+
 
 
 <%#= link_to 'Edit', edit_order_path(@order) %> |

@@ -2,6 +2,11 @@ class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
 
+  def vieworder
+    resp = JSON.parse(params[:JSONData])
+    result = JSON.parse(resp['Result'])
+    ap result
+  end
   # MerchantID = '11940506'
   # HashKey = '9npBbx2Y38q1sFA70jWezAS4OeCVCLBM'
   # HashIV ='80okyqiBzJC1od9p'
