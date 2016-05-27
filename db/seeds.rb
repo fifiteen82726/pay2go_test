@@ -10,4 +10,9 @@
 Order.destroy_all
 
 
+
+10.times do |i|
+	Order.create(:total => 500);
+end
+
 Order.create(:total => 500);
