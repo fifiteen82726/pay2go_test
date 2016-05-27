@@ -11,10 +11,15 @@
 
   <tbody>
     <% @orders.each do |order| %>
+    
+    <tr> 
+      <td>ID</td>
+      <td>total</td>
+    </tr>
       <tr>
-        <td>order's id: <%= order.id %></td>
-        <td>order's total: <%= order.total %></td>
-
+        <td><%= order.id %></td>
+        <td><%= order.total %></td>
+    
         <td><%= link_to 'Pay', order %></td>
         <td><%#= link_to 'Edit', edit_order_path(order) %></td>
         <td><%#= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>

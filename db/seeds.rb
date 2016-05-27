@@ -12,7 +12,7 @@ Order.destroy_all
 
 
 10.times do |i|
-	Order.create(:total => 500);
+	Order.create(:total => Faker::Number.between(0, 1000));
 end
 
-Order.create(:total => 500);
+# Order.create(:total => 500);

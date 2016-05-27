@@ -7,8 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container-fluid">
+	
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!-- <a class="navbar-brand" href=""> -->
+      <%= link_to "智付寶刷卡測試", root_path, :class => "navbar-brand" %> 
+        <!-- <img alt="Brand" src="..."> -->
+       
+  
+       <a class="navbar-brand" href="https://www.pay2go.com/dw_files/info_api/pay2go_gateway_MPGapi_V1_1_7.pdf">
+        
+       官方文件 
+      </a>
+
+      <a class="navbar-brand" href="http://fifiteen82726-blog.logdown.com/posts/734567-rails-think-tank-fubaojin-flow">
+        
+       教學BLog 
+      </a>
+    </div>
+  </div>
+</nav>
 
 <%= yield %>
 
+</div>
 </body>
 </html>
